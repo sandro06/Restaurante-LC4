@@ -1,0 +1,51 @@
+﻿@model Restaurante.Entities.Mesero
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Mesero</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CarnetSanidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarnetSanidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sueldo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sueldo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MeseroId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,67 @@
+﻿@model Restaurante.Entities.Mesa
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Mesa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pedido.PedidoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pedido.PedidoId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sucursal.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sucursal.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Capacidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Capacidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PedidoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PedidoId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MesaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,59 @@
+﻿@model Restaurante.Entities.OrdenCompra
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OrdenCompra</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Insumo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Insumo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SucursalId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SucursalId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProveedorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProveedorId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OrdenCompraId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,75 @@
+﻿@model Restaurante.Entities.Cliente
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pedido.PedidoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pedido.PedidoId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reserva.Referencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reserva.Referencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApeMat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApeMat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApePat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApePat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dni)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dni)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReservaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReservaId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ClienteId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

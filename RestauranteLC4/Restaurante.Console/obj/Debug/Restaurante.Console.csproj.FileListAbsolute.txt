@@ -1,0 +1,49 @@
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Console.exe.config
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Console.exe
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Console.pdb
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Entities.dll
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Persistence.dll
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Console\bin\Debug\EntityFramework.dll
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Entities.pdb
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Persistence.pdb
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Console\bin\Debug\EntityFramework.xml
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Console\obj\Debug\Restaurante.Console.csprojResolveAssemblyReference.cache
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Console\obj\Debug\Restaurante.Console.exe
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Console\obj\Debug\Restaurante.Console.pdb
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Console.exe.config
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Console\obj\Debug\Restaurante.Console.exe
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Console\obj\Debug\Restaurante.Console.pdb
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Console.exe
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Console.pdb
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Entities.dll
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Persistence.dll
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Console\bin\Debug\EntityFramework.dll
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Entities.pdb
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Persistence.pdb
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Console\bin\Debug\EntityFramework.xml
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Console\obj\Debug\Restaurante.Console.csprojResolveAssemblyReference.cache
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Console.exe.config
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Console\obj\Debug\Restaurante.Console.exe
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Console\obj\Debug\Restaurante.Console.pdb
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Console.exe
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Console.pdb
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Entities.dll
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Persistence.dll
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Console\bin\Debug\EntityFramework.dll
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Entities.pdb
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Persistence.pdb
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Console\bin\Debug\EntityFramework.xml
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Console\obj\Debug\Restaurante.Console.csprojResolveAssemblyReference.cache
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Console.exe.config
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Console.exe
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Console.pdb
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Entities.dll
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Persistence.dll
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Console\bin\Debug\EntityFramework.dll
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Entities.pdb
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Persistence.pdb
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Console\bin\Debug\Restaurante.Persistence.dll.config
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Console\bin\Debug\EntityFramework.xml
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Console\obj\Debug\Restaurante.Console.csprojResolveAssemblyReference.cache
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Console\obj\Debug\Restaurante.Console.exe
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Console\obj\Debug\Restaurante.Console.pdb

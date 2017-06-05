@@ -1,0 +1,91 @@
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Persistence\bin\Debug\Restaurante.Persistence.dll.config
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Persistence\bin\Debug\Restaurante.Persistence.dll
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Persistence\bin\Debug\Restaurante.Persistence.pdb
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Persistence\bin\Debug\EntityFramework.dll
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Persistence\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Persistence\bin\Debug\Restaurante.Entities.dll
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Persistence\bin\Debug\Restaurante.Entities.pdb
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Persistence\bin\Debug\EntityFramework.xml
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Persistence\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.csprojResolveAssemblyReference.cache
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.dll
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.pdb
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations.FirstMig.resources
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.csproj.GenerateResource.Cache
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations.SecondMig.resources
+C:\Users\R-Five\Documents\Visual Studio 2015\Projects\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations.ThirdMig.resources
+C:\Users\R-Five\Documents\Visual Studio 2015\Projects\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._4_Mig.resources
+C:\Users\R-Five\Documents\Visual Studio 2015\Projects\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._5_Mig.resources
+C:\Users\R-Five\Documents\Visual Studio 2015\Projects\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._6_Mig.resources
+C:\Users\R-Five\Documents\Visual Studio 2015\Projects\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._7_Mig.resources
+C:\Users\R-Five\Documents\Visual Studio 2015\Projects\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._8_Mig.resources
+C:\Users\R-Five\Documents\Visual Studio 2015\Projects\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._9_Mig.resources
+C:\Users\R-Five\Documents\Visual Studio 2015\Projects\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._10_Mig.resources
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\bin\Debug\Restaurante.Persistence.dll.config
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\bin\Debug\Restaurante.Persistence.dll
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\bin\Debug\Restaurante.Persistence.pdb
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\bin\Debug\EntityFramework.dll
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\bin\Debug\Restaurante.Entities.dll
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\bin\Debug\Restaurante.Entities.pdb
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\bin\Debug\EntityFramework.xml
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.csprojResolveAssemblyReference.cache
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations.FirstMig.resources
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations.SecondMig.resources
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations.ThirdMig.resources
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._4_Mig.resources
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._5_Mig.resources
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._6_Mig.resources
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._7_Mig.resources
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._8_Mig.resources
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._9_Mig.resources
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._10_Mig.resources
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.csproj.GenerateResource.Cache
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.dll
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.pdb
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._12_Mig.resources
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._13_Mig.resources
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._14_Mig.resources
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations.Final_Mig.resources
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\bin\Debug\Restaurante.Persistence.dll.config
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\bin\Debug\Restaurante.Persistence.dll
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\bin\Debug\Restaurante.Persistence.pdb
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\bin\Debug\EntityFramework.dll
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\bin\Debug\Restaurante.Entities.dll
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\bin\Debug\Restaurante.Entities.pdb
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\bin\Debug\EntityFramework.xml
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.csprojResolveAssemblyReference.cache
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations.FirstMig.resources
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations.SecondMig.resources
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations.ThirdMig.resources
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._4_Mig.resources
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._5_Mig.resources
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._6_Mig.resources
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._7_Mig.resources
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._8_Mig.resources
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._9_Mig.resources
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._10_Mig.resources
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._12_Mig.resources
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._13_Mig.resources
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations._14_Mig.resources
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations.Final_Mig.resources
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.csproj.GenerateResource.Cache
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.dll
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.pdb
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Persistence\bin\Debug\Restaurante.Persistence.dll.config
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Persistence\bin\Debug\Restaurante.Persistence.dll
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Persistence\bin\Debug\Restaurante.Persistence.pdb
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Persistence\bin\Debug\EntityFramework.dll
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Persistence\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Persistence\bin\Debug\Restaurante.Entities.dll
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Persistence\bin\Debug\Restaurante.Entities.pdb
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Persistence\bin\Debug\EntityFramework.xml
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Persistence\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.csprojResolveAssemblyReference.cache
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.dll
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.pdb
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations.InitialModel.resources
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.csproj.GenerateResource.Cache

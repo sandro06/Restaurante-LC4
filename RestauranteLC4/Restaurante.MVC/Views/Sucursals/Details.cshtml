@@ -1,0 +1,51 @@
+﻿@model Restaurante.Entities.Sucursal
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Sucursal</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Encuesta.Resultado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Encuesta.Resultado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrdenCompra.Insumo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrdenCompra.Insumo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DireccionId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DireccionId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SucursalId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

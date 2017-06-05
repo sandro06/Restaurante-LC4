@@ -1,0 +1,17 @@
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Entities\bin\Debug\Restaurante.Entities.dll
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Entities\bin\Debug\Restaurante.Entities.pdb
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Entities\obj\Debug\Restaurante.Entities.dll
+c:\users\r-five\documents\visual studio 2015\Projects\Restaurante\Restaurante.Entities\obj\Debug\Restaurante.Entities.pdb
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Entities\bin\Debug\Restaurante.Entities.dll
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Entities\bin\Debug\Restaurante.Entities.pdb
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Entities\obj\Debug\Restaurante.Entities.dll
+C:\Users\Clase\Downloads\Restaurante(3-Partes)\Restaurante\Restaurante.Entities\obj\Debug\Restaurante.Entities.pdb
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Entities\bin\Debug\Restaurante.Entities.dll
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Entities\bin\Debug\Restaurante.Entities.pdb
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Entities\obj\Debug\Restaurante.Entities.dll
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Entities\obj\Debug\Restaurante.Entities.pdb
+C:\Users\R-Five\Downloads\Compressed\Restaurante Final\Restaurante\Restaurante.Entities\obj\Debug\Restaurante.Entities.csprojResolveAssemblyReference.cache
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Entities\bin\Debug\Restaurante.Entities.dll
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Entities\bin\Debug\Restaurante.Entities.pdb
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Entities\obj\Debug\Restaurante.Entities.dll
+C:\Users\PC-User\Desktop\Restaurante\Restaurante.Entities\obj\Debug\Restaurante.Entities.pdb
