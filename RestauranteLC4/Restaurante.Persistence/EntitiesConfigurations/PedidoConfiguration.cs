@@ -17,13 +17,13 @@ namespace Restaurante.Persistence.EntitiesConfigurations
             HasKey(c => c.PedidoId);
             //RC
             HasRequired(c => c.Mesero)
-               .WithMany(c => c.Pedidos);
+               .WithMany(c => c.Pedidos)
+               .HasForeignKey(c => c.MeseroId);
 
             HasRequired(c => c.Venta)
                 .WithRequiredPrincipal(c => c.Pedido);
 
-            HasRequired(c => c.Mesa)
-                .WithRequiredPrincipal(c => c.Pedido);
+            
 
             HasMany(c => c.Platos)
                 .WithMany(c => c.Pedidos)

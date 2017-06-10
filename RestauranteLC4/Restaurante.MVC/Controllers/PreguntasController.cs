@@ -8,32 +8,28 @@ using System.Web;
 using System.Web.Mvc;
 using Restaurante.Entities;
 using Restaurante.Persistence;
-using Restaurante.Entities.IRepositories;
 
 namespace Restaurante.MVC.Controllers
 {
     public class PreguntasController : Controller
     {
-        private readonly IUnityOfWork _UnityOfWork;
-        public PreguntasController(IUnityOfWork unityOfWork)
-        {
-            _UnityOfWork = unityOfWork;
-        }
-        // GET: Ventas
+        private RestauranteDbContext db = new RestauranteDbContext();
+
+        // GET: Preguntas
         public ActionResult Index()
         {
-            return View(_UnityOfWork.Preguntas.GetAll());
+            var preguntas = db.Preguntas.Include(p => p.Encuesta);
+            return View(preguntas.ToList());
         }
 
-        // GET: Ventas/Details/5
+        // GET: Preguntas/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Venta venta = db.Ventas.Find(id);
-            Pregunta pregunta = _UnityOfWork.Preguntas.Get(id);
+            Pregunta pregunta = db.Preguntas.Find(id);
             if (pregunta == null)
             {
                 return HttpNotFound();
@@ -41,77 +37,72 @@ namespace Restaurante.MVC.Controllers
             return View(pregunta);
         }
 
-        // GET: Ventas/Create
+        // GET: Preguntas/Create
         public ActionResult Create()
         {
-
+            ViewBag.EncuestaId = new SelectList(db.Encuestas, "EncuestaId", "Resultado");
             return View();
         }
 
-        // POST: Ventas/Create
+        // POST: Preguntas/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "VentaId,TipoPago,DetalleVenta,PedidoId")] Pregunta pregunta)
+        public ActionResult Create([Bind(Include = "PreguntaId,Contenido,Estado,EncuestaId")] Pregunta pregunta)
         {
             if (ModelState.IsValid)
             {
-                //db.Ventas.Add(venta);
-                _UnityOfWork.Preguntas.Add(pregunta);
-                //db.SaveChanges();
-                _UnityOfWork.SaveChanges();
+                db.Preguntas.Add(pregunta);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
+            ViewBag.EncuestaId = new SelectList(db.Encuestas, "EncuestaId", "Resultado", pregunta.EncuestaId);
             return View(pregunta);
         }
 
-        // GET: Ventas/Edit/5
+        // GET: Preguntas/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Venta venta = db.Ventas.Find(id);
-            Pregunta pregunta = _UnityOfWork.Preguntas.Get(id);
+            Pregunta pregunta = db.Preguntas.Find(id);
             if (pregunta == null)
             {
                 return HttpNotFound();
             }
-
+            ViewBag.EncuestaId = new SelectList(db.Encuestas, "EncuestaId", "Resultado", pregunta.EncuestaId);
             return View(pregunta);
         }
 
-        // POST: Ventas/Edit/5
+        // POST: Preguntas/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "VentaId,TipoPago,DetalleVenta,PedidoId")] Pregunta pregunta)
+        public ActionResult Edit([Bind(Include = "PreguntaId,Contenido,Estado,EncuestaId")] Pregunta pregunta)
         {
             if (ModelState.IsValid)
             {
-                //db.Entry(venta).State = EntityState.Modified;
-                _UnityOfWork.StateModified(pregunta);
-                //db.SaveChanges();
-                _UnityOfWork.SaveChanges();
+                db.Entry(pregunta).State = EntityState.Modified;
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            ViewBag.EncuestaId = new SelectList(db.Encuestas, "EncuestaId", "Resultado", pregunta.EncuestaId);
             return View(pregunta);
         }
 
-        // GET: Ventas/Delete/5
+        // GET: Preguntas/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Venta venta = db.Ventas.Find(id);
-            Pregunta pregunta = _UnityOfWork.Preguntas.Get(id);
+            Pregunta pregunta = db.Preguntas.Find(id);
             if (pregunta == null)
             {
                 return HttpNotFound();
@@ -119,15 +110,14 @@ namespace Restaurante.MVC.Controllers
             return View(pregunta);
         }
 
-        // POST: Ventas/Delete/5
+        // POST: Preguntas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            //Venta venta = db.Ventas.Find(id);
-            Pregunta pregunta = _UnityOfWork.Preguntas.Get(id);
-            _UnityOfWork.Preguntas.Delete(pregunta);
-            _UnityOfWork.SaveChanges();
+            Pregunta pregunta = db.Preguntas.Find(id);
+            db.Preguntas.Remove(pregunta);
+            db.SaveChanges();
             return RedirectToAction("Index");
         }
 
@@ -135,7 +125,7 @@ namespace Restaurante.MVC.Controllers
         {
             if (disposing)
             {
-                _UnityOfWork.Dispose();
+                db.Dispose();
             }
             base.Dispose(disposing);
         }

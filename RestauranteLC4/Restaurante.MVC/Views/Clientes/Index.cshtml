@@ -16,9 +16,6 @@
             @Html.DisplayNameFor(model => model.Pedido.PedidoId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Reserva.Referencia)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.ApeMat)
         </th>
         <th>
@@ -30,9 +27,6 @@
         <th>
             @Html.DisplayNameFor(model => model.Direccion)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ReservaId)
-        </th>
         <th></th>
     </tr>
 
@@ -40,9 +34,6 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Pedido.PedidoId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Reserva.Referencia)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ApeMat)
@@ -55,9 +46,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Direccion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ReservaId)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ClienteId }) |

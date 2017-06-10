@@ -13,6 +13,14 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            @Html.DisplayNameFor(model => model.Sucursal.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sucursal.Nombre)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Insumo)
         </dt>
 
@@ -34,22 +42,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.Precio)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SucursalId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SucursalId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ProveedorId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProveedorId)
         </dd>
 
     </dl>

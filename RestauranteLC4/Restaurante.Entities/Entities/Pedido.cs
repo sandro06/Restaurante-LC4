@@ -17,6 +17,7 @@ namespace Restaurante.Entities
         public List<Cliente> Clientes { get; set; }
         public ICollection<Plato> Platos { get; set; }
         public ICollection<Bebida> Bebidas { get; set; }
+        
         public Pedido()
         {
             Platos = new HashSet<Plato>();
@@ -26,11 +27,11 @@ namespace Restaurante.Entities
 
         public Mesero Mesero { get; set; }
 
-        public int VentaId { get; set; }
+       
 
         public Venta Venta { get; set; }
 
-        public int MesaId { get; set; }
+        
 
         public Mesa Mesa { get; set; }
     }

@@ -16,7 +16,8 @@ namespace Restaurante.Persistence.EntitiesConfigurations
             HasKey(c => c.TipoCorreoId);
 
             HasRequired(c => c.Cliente)
-                .WithMany(c => c.TipoCorreos);
+                .WithMany(c => c.TipoCorreos)
+                .HasForeignKey(c => c.ClienteId);
         }
     }
 }

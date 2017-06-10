@@ -89,3 +89,17 @@ C:\Users\PC-User\Desktop\Restaurante\Restaurante.Persistence\obj\Debug\Restauran
 C:\Users\PC-User\Desktop\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.pdb
 C:\Users\PC-User\Desktop\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations.InitialModel.resources
 C:\Users\PC-User\Desktop\Restaurante\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.csproj.GenerateResource.Cache
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Persistence\bin\Debug\Restaurante.Persistence.dll.config
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Persistence\bin\Debug\Restaurante.Persistence.dll
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Persistence\bin\Debug\Restaurante.Persistence.pdb
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Persistence\bin\Debug\EntityFramework.dll
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Persistence\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Persistence\bin\Debug\Restaurante.Entities.dll
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Persistence\bin\Debug\Restaurante.Entities.pdb
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Persistence\bin\Debug\EntityFramework.xml
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Persistence\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.csprojResolveAssemblyReference.cache
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.dll
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.pdb
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.Migrations.sakfdsf.resources
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Persistence\obj\Debug\Restaurante.Persistence.csproj.GenerateResource.Cache

@@ -8,32 +8,28 @@ using System.Web;
 using System.Web.Mvc;
 using Restaurante.Entities;
 using Restaurante.Persistence;
-using Restaurante.Entities.IRepositories;
 
 namespace Restaurante.MVC.Controllers
 {
     public class BebidasController : Controller
     {
-        private readonly IUnityOfWork _UnityOfWork;
-        public BebidasController(IUnityOfWork unityOfWork)
-        {
-            _UnityOfWork = unityOfWork;
-        }
-        // GET: Ventas
+        private RestauranteDbContext db = new RestauranteDbContext();
+
+        // GET: Bebidas
         public ActionResult Index()
         {
-            return View(_UnityOfWork.Bebidas.GetAll());
+            var bebidas = db.Bebidas.Include(b => b.TipoBebida);
+            return View(bebidas.ToList());
         }
 
-        // GET: Ventas/Details/5
+        // GET: Bebidas/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Venta venta = db.Ventas.Find(id);
-            Bebida bebida = _UnityOfWork.Bebidas.Get(id);
+            Bebida bebida = db.Bebidas.Find(id);
             if (bebida == null)
             {
                 return HttpNotFound();
@@ -41,77 +37,72 @@ namespace Restaurante.MVC.Controllers
             return View(bebida);
         }
 
-        // GET: Ventas/Create
+        // GET: Bebidas/Create
         public ActionResult Create()
         {
-
+            ViewBag.TipoBebidaId = new SelectList(db.TipoBebidas, "TipoBebidaId", "Nombre");
             return View();
         }
 
-        // POST: Ventas/Create
+        // POST: Bebidas/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "VentaId,TipoPago,DetalleVenta,PedidoId")] Bebida bebida)
+        public ActionResult Create([Bind(Include = "BebidaId,Nombre,Precio,Imagen,Descripcion,TipoBebidaId")] Bebida bebida)
         {
             if (ModelState.IsValid)
             {
-                //db.Ventas.Add(venta);
-                _UnityOfWork.Bebidas.Add(bebida);
-                //db.SaveChanges();
-                _UnityOfWork.SaveChanges();
+                db.Bebidas.Add(bebida);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
+            ViewBag.TipoBebidaId = new SelectList(db.TipoBebidas, "TipoBebidaId", "Nombre", bebida.TipoBebidaId);
             return View(bebida);
         }
 
-        // GET: Ventas/Edit/5
+        // GET: Bebidas/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Venta venta = db.Ventas.Find(id);
-            Bebida bebida = _UnityOfWork.Bebidas.Get(id);
+            Bebida bebida = db.Bebidas.Find(id);
             if (bebida == null)
             {
                 return HttpNotFound();
             }
-
+            ViewBag.TipoBebidaId = new SelectList(db.TipoBebidas, "TipoBebidaId", "Nombre", bebida.TipoBebidaId);
             return View(bebida);
         }
 
-        // POST: Ventas/Edit/5
+        // POST: Bebidas/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "VentaId,TipoPago,DetalleVenta,PedidoId")] Bebida bebida)
+        public ActionResult Edit([Bind(Include = "BebidaId,Nombre,Precio,Imagen,Descripcion,TipoBebidaId")] Bebida bebida)
         {
             if (ModelState.IsValid)
             {
-                //db.Entry(venta).State = EntityState.Modified;
-                _UnityOfWork.StateModified(bebida);
-                //db.SaveChanges();
-                _UnityOfWork.SaveChanges();
+                db.Entry(bebida).State = EntityState.Modified;
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            ViewBag.TipoBebidaId = new SelectList(db.TipoBebidas, "TipoBebidaId", "Nombre", bebida.TipoBebidaId);
             return View(bebida);
         }
 
-        // GET: Ventas/Delete/5
+        // GET: Bebidas/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Venta venta = db.Ventas.Find(id);
-            Bebida bebida = _UnityOfWork.Bebidas.Get(id);
+            Bebida bebida = db.Bebidas.Find(id);
             if (bebida == null)
             {
                 return HttpNotFound();
@@ -119,15 +110,14 @@ namespace Restaurante.MVC.Controllers
             return View(bebida);
         }
 
-        // POST: Ventas/Delete/5
+        // POST: Bebidas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            //Venta venta = db.Ventas.Find(id);
-            Bebida bebida = _UnityOfWork.Bebidas.Get(id);
-            _UnityOfWork.Bebidas.Delete(bebida);
-            _UnityOfWork.SaveChanges();
+            Bebida bebida = db.Bebidas.Find(id);
+            db.Bebidas.Remove(bebida);
+            db.SaveChanges();
             return RedirectToAction("Index");
         }
 
@@ -135,7 +125,7 @@ namespace Restaurante.MVC.Controllers
         {
             if (disposing)
             {
-                _UnityOfWork.Dispose();
+                db.Dispose();
             }
             base.Dispose(disposing);
         }

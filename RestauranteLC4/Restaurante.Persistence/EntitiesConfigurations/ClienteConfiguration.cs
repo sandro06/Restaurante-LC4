@@ -23,7 +23,9 @@ namespace Restaurante.Persistence.EntitiesConfigurations
             //Relations Configurations
             HasRequired(c => c.Pedido)
                  .WithMany(c => c.Clientes);
-            
+            HasRequired(c => c.Reserva)
+                .WithRequiredPrincipal(c => c.Cliente);
+
         }
     }
 }

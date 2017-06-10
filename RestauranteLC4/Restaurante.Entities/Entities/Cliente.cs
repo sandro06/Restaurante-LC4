@@ -21,7 +21,7 @@ namespace Restaurante.Entities
         public int PedidoId { get; set; }
         public Pedido Pedido { get; set; }
 
-        public int ReservaId { get; set; }
+        
         public Reserva Reserva { get; set; }
 
       

@@ -16,6 +16,9 @@ namespace Restaurante.Persistence.EntitiesConfigurations
             ToTable("Proveedores");
 
             HasKey(c => c.ProveedorId);
+            HasRequired(c => c.OrdenCompra)
+                .WithMany(c => c.Proveedores)
+                .HasForeignKey(c => c.OrdenCompraId);
 
         }
     }

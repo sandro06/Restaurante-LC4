@@ -16,9 +16,10 @@ namespace Restaurante.Entities
         public DateTime Fecha { get; set; }
         [Required]
         public string Estado { get; set; }
-        public int ClienteId { get; set; }
-        public int SucursalId { get; set; }
+        
+        
         public Cliente Cliente { get; set; }
-        public Sucursal Sucursal { get; set; }
+        
+        
     }
 }

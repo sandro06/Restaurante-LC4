@@ -9,7 +9,7 @@ namespace Restaurante.Entities
         public string TipoPago { get; set; }
         [Required]
         public string DetalleVenta { get; set; }
-        public int PedidoId { get; set; }
+
         public Pedido Pedido { get; set; }
     }
 }

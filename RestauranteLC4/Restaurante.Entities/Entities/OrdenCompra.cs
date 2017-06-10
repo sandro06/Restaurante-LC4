@@ -18,8 +18,8 @@ namespace Restaurante.Entities
         public double Precio { get; set; }
         [Required]
         public int SucursalId { get; set; }
-        public int ProveedorId { get; set; }
-        public Proveedor Proveedor { get; set; }
+        
+        public List<Proveedor> Proveedores { get; set; }
         public Sucursal Sucursal { get; set; }
         
     }

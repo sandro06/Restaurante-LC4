@@ -16,8 +16,12 @@ namespace Restaurante.Persistence.EntitiesConfigurations
             HasKey(c => c.DireccionId);
 
             HasRequired(c => c.Distrito).
-                WithMany(c => c.Direcciones);
-            
+                WithMany(c => c.Direcciones)
+                .HasForeignKey(c => c.DistritoId);
+            HasRequired(c => c.Sucursal)
+                .WithRequiredPrincipal(c => c.Direccion);
+
+
         }
     }
 }

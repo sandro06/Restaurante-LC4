@@ -15,3 +15,8 @@ C:\Users\PC-User\Desktop\Restaurante\Restaurante.Entities\bin\Debug\Restaurante.
 C:\Users\PC-User\Desktop\Restaurante\Restaurante.Entities\bin\Debug\Restaurante.Entities.pdb
 C:\Users\PC-User\Desktop\Restaurante\Restaurante.Entities\obj\Debug\Restaurante.Entities.dll
 C:\Users\PC-User\Desktop\Restaurante\Restaurante.Entities\obj\Debug\Restaurante.Entities.pdb
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Entities\bin\Debug\Restaurante.Entities.dll
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Entities\bin\Debug\Restaurante.Entities.pdb
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Entities\obj\Debug\Restaurante.Entities.dll
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Entities\obj\Debug\Restaurante.Entities.pdb
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Entities\obj\Debug\Restaurante.Entities.csprojResolveAssemblyReference.cache

@@ -8,31 +8,32 @@ using System.Web;
 using System.Web.Mvc;
 using Restaurante.Entities;
 using Restaurante.Persistence;
-using Restaurante.Persistence.Repositories;
 
 namespace Restaurante.MVC.Controllers
 {
     public class ProvinciasController : Controller
     {
-        private RestauranteDbContext db = new RestauranteDbContext();
-        private UnityOfWork unityOfWork;
 
-        // GET: Clientes
+        public ProvinciasController()
+        {
+                
+        }
+        
+        // GET: Provincias
         public ActionResult Index()
         {
-            //return View(clientes.ToList());
-            return View(unityOfWork.Provincias.GetAll());
+            var provincias = _UnityOfWork.Provincias.Include(p => p.Departamento);
+            return View(provincias.ToList());
         }
 
-        // GET: Clientes/Details/5
+        // GET: Provincias/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Cliente cliente = db.Clientes.Find(id);
-            Provincia provincia = unityOfWork.Provincias.Get(id);
+            Provincia provincia = _UnityOfWork.Provincias.Find(id);
             if (provincia == null)
             {
                 return HttpNotFound();
@@ -40,76 +41,72 @@ namespace Restaurante.MVC.Controllers
             return View(provincia);
         }
 
-        // GET: Clientes/Create
+        // GET: Provincias/Create
         public ActionResult Create()
         {
+            ViewBag.DepartamentoId = new SelectList(_UnityOfWork.Departamentos, "DepartamentoId", "Nombre");
             return View();
         }
 
-        // POST: Clientes/Create
+        // POST: Provincias/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ClienteId,ApeMat,ApePat,Dni,Direccion,PedidoId,ReservaId")] Provincia provincia)
+        public ActionResult Create([Bind(Include = "ProvinciaId,Nombre,DepartamentoId")] Provincia provincia)
         {
             if (ModelState.IsValid)
             {
-                //db.Clientes.Add(cliente);
-                unityOfWork.Provincias.Add(provincia);
-                //db.SaveChanges();
-                unityOfWork.SaveChanges();
+                _UnityOfWork.Provincias.Add(provincia);
+                _UnityOfWork.SaveChanges();
                 return RedirectToAction("Index");
             }
 
+            ViewBag.DepartamentoId = new SelectList(_UnityOfWork.Departamentos, "DepartamentoId", "Nombre", provincia.DepartamentoId);
             return View(provincia);
         }
 
-        // GET: Clientes/Edit/5
+        // GET: Provincias/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Cliente cliente = db.Clientes.Find(id);
-            Provincia provincia = unityOfWork.Provincias.Get(id);
+            Provincia provincia = _UnityOfWork.Provincias.Find(id);
             if (provincia == null)
             {
                 return HttpNotFound();
             }
-
+            ViewBag.DepartamentoId = new SelectList(_UnityOfWork.Departamentos, "DepartamentoId", "Nombre", provincia.DepartamentoId);
             return View(provincia);
         }
 
-        // POST: Clientes/Edit/5
+        // POST: Provincias/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ClienteId,ApeMat,ApePat,Dni,Direccion,PedidoId,ReservaId")] Provincia provincia)
+        public ActionResult Edit([Bind(Include = "ProvinciaId,Nombre,DepartamentoId")] Provincia provincia)
         {
             if (ModelState.IsValid)
             {
-                //db.Entry(cliente).State = EntityState.Modified;
-                unityOfWork.StateModified(provincia);
-                //db.SaveChanges();
-                unityOfWork.SaveChanges();
+                _UnityOfWork.Entry(provincia).State = EntityState.Modified;
+                _UnityOfWork.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            ViewBag.DepartamentoId = new SelectList(_UnityOfWork.Departamentos, "DepartamentoId", "Nombre", provincia.DepartamentoId);
             return View(provincia);
         }
 
-        // GET: Clientes/Delete/5
+        // GET: Provincias/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Cliente cliente = db.Clientes.Find(id);
-            Provincia provincia = unityOfWork.Provincias.Get(id);
+            Provincia provincia = _UnityOfWork.Provincias.Find(id);
             if (provincia == null)
             {
                 return HttpNotFound();
@@ -117,17 +114,14 @@ namespace Restaurante.MVC.Controllers
             return View(provincia);
         }
 
-        // POST: Clientes/Delete/5
+        // POST: Provincias/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            //Cliente cliente = db.Clientes.Find(id);
-            Provincia provincia = unityOfWork.Provincias.Get(id);
-            //db.Clientes.Remove(cliente);
-            unityOfWork.Provincias.Delete(provincia);
-            //db.SaveChanges();
-            unityOfWork.SaveChanges();
+            Provincia provincia = _UnityOfWork.Provincias.Find(id);
+            _UnityOfWork.Provincias.Remove(provincia);
+            _UnityOfWork.SaveChanges();
             return RedirectToAction("Index");
         }
 
@@ -135,11 +129,480 @@ namespace Restaurante.MVC.Controllers
         {
             if (disposing)
             {
-                //db.Dispose();
-                unityOfWork.Dispose();
+                _UnityOfWork.Dispose();
             }
             base.Dispose(disposing);
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //FIN DEL CODIGO } }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private RestauranteDbContext _UnityOfWork = new RestauranteDbContext();
     }
 }
-

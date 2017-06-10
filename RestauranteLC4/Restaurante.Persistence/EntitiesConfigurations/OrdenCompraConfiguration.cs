@@ -16,10 +16,10 @@ namespace Restaurante.Persistence.EntitiesConfigurations
             ToTable("OrdenesCompra");
             HasKey(c => c.OrdenCompraId);
 
-            HasRequired(c => c.Proveedor)
-               .WithRequiredPrincipal(c => c.OrdenCompra);
+            
             HasRequired(c => c.Sucursal)
-               .WithRequiredPrincipal(c => c.OrdenCompra);
+               .WithMany(c => c.OrdenCompras)
+               .HasForeignKey(c => c.SucursalId);
         }
     }
 }

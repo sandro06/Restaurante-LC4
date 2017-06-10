@@ -19,6 +19,7 @@ namespace Restaurante.Entities
         [Required]
         public string Correo { get; set; }
         public OrdenCompra OrdenCompra { get; set; }
+        public int OrdenCompraId { get; set; }
 
     }
 }

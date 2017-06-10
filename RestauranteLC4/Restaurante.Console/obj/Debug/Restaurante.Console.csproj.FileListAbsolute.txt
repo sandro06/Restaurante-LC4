@@ -47,3 +47,16 @@ C:\Users\PC-User\Desktop\Restaurante\Restaurante.Console\bin\Debug\EntityFramewo
 C:\Users\PC-User\Desktop\Restaurante\Restaurante.Console\obj\Debug\Restaurante.Console.csprojResolveAssemblyReference.cache
 C:\Users\PC-User\Desktop\Restaurante\Restaurante.Console\obj\Debug\Restaurante.Console.exe
 C:\Users\PC-User\Desktop\Restaurante\Restaurante.Console\obj\Debug\Restaurante.Console.pdb
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Console\bin\Debug\Restaurante.Console.exe.config
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Console\bin\Debug\Restaurante.Console.exe
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Console\bin\Debug\Restaurante.Console.pdb
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Console\bin\Debug\Restaurante.Entities.dll
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Console\bin\Debug\Restaurante.Persistence.dll
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Console\bin\Debug\EntityFramework.dll
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Console\bin\Debug\Restaurante.Entities.pdb
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Console\bin\Debug\Restaurante.Persistence.pdb
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Console\bin\Debug\Restaurante.Persistence.dll.config
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Console\bin\Debug\EntityFramework.xml
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Console\obj\Debug\Restaurante.Console.csprojResolveAssemblyReference.cache
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Console\obj\Debug\Restaurante.Console.exe
+C:\Users\PC-User\Desktop\RestauranteLC4\Restaurante.Console\obj\Debug\Restaurante.Console.pdb

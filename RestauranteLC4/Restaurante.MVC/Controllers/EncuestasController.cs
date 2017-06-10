@@ -8,31 +8,28 @@ using System.Web;
 using System.Web.Mvc;
 using Restaurante.Entities;
 using Restaurante.Persistence;
-using Restaurante.Persistence.Repositories;
 
 namespace Restaurante.MVC.Controllers
 {
     public class EncuestasController : Controller
     {
         private RestauranteDbContext db = new RestauranteDbContext();
-        private UnityOfWork unityOfWork;
 
-        // GET: Clientes
+        // GET: Encuestas
         public ActionResult Index()
         {
-            //return View(clientes.ToList());
-            return View(unityOfWork.Encuestas.GetAll());
+            var encuestas = db.Encuestas.Include(e => e.Sucursal);
+            return View(encuestas.ToList());
         }
 
-        // GET: Clientes/Details/5
+        // GET: Encuestas/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Cliente cliente = db.Clientes.Find(id);
-            Encuesta encuesta = unityOfWork.Encuestas.Get(id);
+            Encuesta encuesta = db.Encuestas.Find(id);
             if (encuesta == null)
             {
                 return HttpNotFound();
@@ -40,76 +37,72 @@ namespace Restaurante.MVC.Controllers
             return View(encuesta);
         }
 
-        // GET: Clientes/Create
+        // GET: Encuestas/Create
         public ActionResult Create()
         {
+            ViewBag.SucursalId = new SelectList(db.Sucursales, "SucursalId", "Nombre");
             return View();
         }
 
-        // POST: Clientes/Create
+        // POST: Encuestas/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ClienteId,ApeMat,ApePat,Dni,Direccion,PedidoId,ReservaId")] Encuesta encuesta)
+        public ActionResult Create([Bind(Include = "EncuestaId,Fecha,Resultado,SucursalId")] Encuesta encuesta)
         {
             if (ModelState.IsValid)
             {
-                //db.Clientes.Add(cliente);
-                unityOfWork.Encuestas.Add(encuesta);
-                //db.SaveChanges();
-                unityOfWork.SaveChanges();
+                db.Encuestas.Add(encuesta);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
+            ViewBag.SucursalId = new SelectList(db.Sucursales, "SucursalId", "Nombre", encuesta.SucursalId);
             return View(encuesta);
         }
 
-        // GET: Clientes/Edit/5
+        // GET: Encuestas/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Cliente cliente = db.Clientes.Find(id);
-            Encuesta encuesta = unityOfWork.Encuestas.Get(id);
+            Encuesta encuesta = db.Encuestas.Find(id);
             if (encuesta == null)
             {
                 return HttpNotFound();
             }
-
+            ViewBag.SucursalId = new SelectList(db.Sucursales, "SucursalId", "Nombre", encuesta.SucursalId);
             return View(encuesta);
         }
 
-        // POST: Clientes/Edit/5
+        // POST: Encuestas/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ClienteId,ApeMat,ApePat,Dni,Direccion,PedidoId,ReservaId")] Encuesta encuesta)
+        public ActionResult Edit([Bind(Include = "EncuestaId,Fecha,Resultado,SucursalId")] Encuesta encuesta)
         {
             if (ModelState.IsValid)
             {
-                //db.Entry(cliente).State = EntityState.Modified;
-                unityOfWork.StateModified(encuesta);
-                //db.SaveChanges();
-                unityOfWork.SaveChanges();
+                db.Entry(encuesta).State = EntityState.Modified;
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            ViewBag.SucursalId = new SelectList(db.Sucursales, "SucursalId", "Nombre", encuesta.SucursalId);
             return View(encuesta);
         }
 
-        // GET: Clientes/Delete/5
+        // GET: Encuestas/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Cliente cliente = db.Clientes.Find(id);
-            Encuesta encuesta = unityOfWork.Encuestas.Get(id);
+            Encuesta encuesta = db.Encuestas.Find(id);
             if (encuesta == null)
             {
                 return HttpNotFound();
@@ -117,17 +110,14 @@ namespace Restaurante.MVC.Controllers
             return View(encuesta);
         }
 
-        // POST: Clientes/Delete/5
+        // POST: Encuestas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            //Cliente cliente = db.Clientes.Find(id);
-            Encuesta encuesta = unityOfWork.Encuestas.Get(id);
-            //db.Clientes.Remove(cliente);
-            unityOfWork.Encuestas.Delete(encuesta);
-            //db.SaveChanges();
-            unityOfWork.SaveChanges();
+            Encuesta encuesta = db.Encuestas.Find(id);
+            db.Encuestas.Remove(encuesta);
+            db.SaveChanges();
             return RedirectToAction("Index");
         }
 
@@ -135,8 +125,7 @@ namespace Restaurante.MVC.Controllers
         {
             if (disposing)
             {
-                //db.Dispose();
-                unityOfWork.Dispose();
+                db.Dispose();
             }
             base.Dispose(disposing);
         }

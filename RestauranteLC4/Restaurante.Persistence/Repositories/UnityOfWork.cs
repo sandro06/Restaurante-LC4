@@ -11,7 +11,7 @@ namespace Restaurante.Persistence.Repositories
     {
         //variable que contendra el contexto de la base de datos
         private readonly RestauranteDbContext _Context;
-        private static readonly object _Lock = new object();
+        
         public IBebidaRepository Bebidas { get; private set; }
         public IClienteRepository Clientes { get; private set; }
         public IDepartamentoRepository Departamentos { get; private set; }

@@ -16,10 +16,9 @@ namespace Restaurante.Persistence.EntitiesConfigurations
             ToTable("Reservas");
             HasKey(c => c.ReservaId);
 
-            HasRequired(c => c.Cliente)
-               .WithRequiredPrincipal(c => c.Reserva);
-            HasRequired(c => c.Sucursal)
-                 .WithMany(c => c.Reservas);
+            
+            
+            
 
         }
     }

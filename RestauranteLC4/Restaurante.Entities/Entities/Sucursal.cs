@@ -12,11 +12,11 @@ namespace Restaurante.Entities
         public int SucursalId { get; set; }
         [Required]
         public string Nombre { get; set; }
-        public int DireccionId { get; set; }
+        
         public Direccion Direccion { get; set; }
-        public OrdenCompra OrdenCompra { get; set; }
-        public Encuesta Encuesta { get; set; }
-        public List<Reserva> Reservas { get; set; }
+        public List<OrdenCompra> OrdenCompras { get; set; }
+        public List<Encuesta> Encuestas { get; set; }
+        
         public List<Mesa> Mesas { get; set; }
     }
 }

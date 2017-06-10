@@ -11,7 +11,7 @@ namespace Restaurante.Entities
         public int Capacidad { get; set; }
         [Required]
         public  string Estado { get; set; }
-        public int PedidoId { get; set; }
+        
         public int SucursalId { get; set; }
         public Pedido Pedido { get; set; }
         public Sucursal Sucursal { get; set; }

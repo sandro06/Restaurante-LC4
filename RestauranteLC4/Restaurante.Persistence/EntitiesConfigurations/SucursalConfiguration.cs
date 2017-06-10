@@ -14,9 +14,7 @@ namespace Restaurante.Persistence.EntitiesConfigurations
         {
             ToTable("Sucursales");
             HasKey(c => c.SucursalId);
-
-            HasRequired(c => c.Direccion)
-                .WithRequiredPrincipal(c => c.Sucursal);
+            
         }
     }
 }

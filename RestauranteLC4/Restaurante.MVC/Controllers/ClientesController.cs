@@ -8,20 +8,18 @@ using System.Web;
 using System.Web.Mvc;
 using Restaurante.Entities;
 using Restaurante.Persistence;
-using Restaurante.Persistence.Repositories;
 
 namespace Restaurante.MVC.Controllers
 {
     public class ClientesController : Controller
     {
         private RestauranteDbContext db = new RestauranteDbContext();
-        private UnityOfWork unityOfWork;
 
         // GET: Clientes
         public ActionResult Index()
         {
-            //return View(clientes.ToList());
-            return View(unityOfWork.Clientes.GetAll());
+            var clientes = db.Clientes.Include(c => c.Pedido);
+            return View(clientes.ToList());
         }
 
         // GET: Clientes/Details/5
@@ -31,8 +29,7 @@ namespace Restaurante.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Cliente cliente = db.Clientes.Find(id);
-            Cliente cliente = unityOfWork.Clientes.Get(id);
+            Cliente cliente = db.Clientes.Find(id);
             if (cliente == null)
             {
                 return HttpNotFound();
@@ -43,6 +40,7 @@ namespace Restaurante.MVC.Controllers
         // GET: Clientes/Create
         public ActionResult Create()
         {
+            ViewBag.PedidoId = new SelectList(db.Pedidos, "PedidoId", "PedidoId");
             return View();
         }
 
@@ -51,17 +49,16 @@ namespace Restaurante.MVC.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ClienteId,ApeMat,ApePat,Dni,Direccion,PedidoId,ReservaId")] Cliente cliente)
+        public ActionResult Create([Bind(Include = "ClienteId,ApeMat,ApePat,Dni,Direccion,PedidoId")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
-                //db.Clientes.Add(cliente);
-                unityOfWork.Clientes.Add(cliente);
-                //db.SaveChanges();
-                unityOfWork.SaveChanges();
+                db.Clientes.Add(cliente);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
+            ViewBag.PedidoId = new SelectList(db.Pedidos, "PedidoId", "PedidoId", cliente.PedidoId);
             return View(cliente);
         }
 
@@ -72,13 +69,12 @@ namespace Restaurante.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Cliente cliente = db.Clientes.Find(id);
-            Cliente cliente = unityOfWork.Clientes.Get(id);
+            Cliente cliente = db.Clientes.Find(id);
             if (cliente == null)
             {
                 return HttpNotFound();
             }
-            
+            ViewBag.PedidoId = new SelectList(db.Pedidos, "PedidoId", "PedidoId", cliente.PedidoId);
             return View(cliente);
         }
 
@@ -87,17 +83,15 @@ namespace Restaurante.MVC.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ClienteId,ApeMat,ApePat,Dni,Direccion,PedidoId,ReservaId")] Cliente cliente)
+        public ActionResult Edit([Bind(Include = "ClienteId,ApeMat,ApePat,Dni,Direccion,PedidoId")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
-                //db.Entry(cliente).State = EntityState.Modified;
-                unityOfWork.StateModified(cliente);
-                //db.SaveChanges();
-                unityOfWork.SaveChanges();
+                db.Entry(cliente).State = EntityState.Modified;
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            
+            ViewBag.PedidoId = new SelectList(db.Pedidos, "PedidoId", "PedidoId", cliente.PedidoId);
             return View(cliente);
         }
 
@@ -108,8 +102,7 @@ namespace Restaurante.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Cliente cliente = db.Clientes.Find(id);
-            Cliente cliente = unityOfWork.Clientes.Get(id);
+            Cliente cliente = db.Clientes.Find(id);
             if (cliente == null)
             {
                 return HttpNotFound();
@@ -122,12 +115,9 @@ namespace Restaurante.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            //Cliente cliente = db.Clientes.Find(id);
-            Cliente cliente = unityOfWork.Clientes.Get(id);
-            //db.Clientes.Remove(cliente);
-            unityOfWork.Clientes.Delete(cliente);
-            //db.SaveChanges();
-            unityOfWork.SaveChanges();
+            Cliente cliente = db.Clientes.Find(id);
+            db.Clientes.Remove(cliente);
+            db.SaveChanges();
             return RedirectToAction("Index");
         }
 
@@ -135,8 +125,7 @@ namespace Restaurante.MVC.Controllers
         {
             if (disposing)
             {
-                //db.Dispose();
-                unityOfWork.Dispose();
+                db.Dispose();
             }
             base.Dispose(disposing);
         }

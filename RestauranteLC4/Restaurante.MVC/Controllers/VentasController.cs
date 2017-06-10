@@ -8,22 +8,18 @@ using System.Web;
 using System.Web.Mvc;
 using Restaurante.Entities;
 using Restaurante.Persistence;
-using Restaurante.Entities.IRepositories;
 
 namespace Restaurante.MVC.Controllers
 {
     public class VentasController : Controller
     {
-       
-        private readonly IUnityOfWork _UnityOfWork;
-        public VentasController(IUnityOfWork unityOfWork)
-        {
-            _UnityOfWork = unityOfWork;
-        }
+        private RestauranteDbContext db = new RestauranteDbContext();
+
         // GET: Ventas
         public ActionResult Index()
         {
-           return View(_UnityOfWork.Ventas.GetAll());
+            var ventas = db.Ventas.Include(v => v.Pedido);
+            return View(ventas.ToList());
         }
 
         // GET: Ventas/Details/5
@@ -33,8 +29,7 @@ namespace Restaurante.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Venta venta = db.Ventas.Find(id);
-            Venta venta = _UnityOfWork.Ventas.Get(id);
+            Venta venta = db.Ventas.Find(id);
             if (venta == null)
             {
                 return HttpNotFound();
@@ -45,7 +40,7 @@ namespace Restaurante.MVC.Controllers
         // GET: Ventas/Create
         public ActionResult Create()
         {
-            
+            ViewBag.VentaId = new SelectList(db.Pedidos, "PedidoId", "PedidoId");
             return View();
         }
 
@@ -54,17 +49,16 @@ namespace Restaurante.MVC.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "VentaId,TipoPago,DetalleVenta,PedidoId")] Venta venta)
+        public ActionResult Create([Bind(Include = "VentaId,TipoPago,DetalleVenta")] Venta venta)
         {
             if (ModelState.IsValid)
             {
-                //db.Ventas.Add(venta);
-                _UnityOfWork.Ventas.Add(venta);
-                //db.SaveChanges();
-                _UnityOfWork.SaveChanges();
+                db.Ventas.Add(venta);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
+            ViewBag.VentaId = new SelectList(db.Pedidos, "PedidoId", "PedidoId", venta.VentaId);
             return View(venta);
         }
 
@@ -75,13 +69,12 @@ namespace Restaurante.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Venta venta = db.Ventas.Find(id);
-            Venta venta = _UnityOfWork.Ventas.Get(id);
+            Venta venta = db.Ventas.Find(id);
             if (venta == null)
             {
                 return HttpNotFound();
             }
-            
+            ViewBag.VentaId = new SelectList(db.Pedidos, "PedidoId", "PedidoId", venta.VentaId);
             return View(venta);
         }
 
@@ -90,17 +83,15 @@ namespace Restaurante.MVC.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "VentaId,TipoPago,DetalleVenta,PedidoId")] Venta venta)
+        public ActionResult Edit([Bind(Include = "VentaId,TipoPago,DetalleVenta")] Venta venta)
         {
             if (ModelState.IsValid)
             {
-                //db.Entry(venta).State = EntityState.Modified;
-                _UnityOfWork.StateModified(venta);
-                //db.SaveChanges();
-                _UnityOfWork.SaveChanges();
+                db.Entry(venta).State = EntityState.Modified;
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            
+            ViewBag.VentaId = new SelectList(db.Pedidos, "PedidoId", "PedidoId", venta.VentaId);
             return View(venta);
         }
 
@@ -111,8 +102,7 @@ namespace Restaurante.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Venta venta = db.Ventas.Find(id);
-            Venta venta = _UnityOfWork.Ventas.Get(id);
+            Venta venta = db.Ventas.Find(id);
             if (venta == null)
             {
                 return HttpNotFound();
@@ -125,10 +115,9 @@ namespace Restaurante.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            //Venta venta = db.Ventas.Find(id);
-            Venta venta = _UnityOfWork.Ventas.Get(id);
-            _UnityOfWork.Ventas.Delete(venta);
-            _UnityOfWork.SaveChanges();
+            Venta venta = db.Ventas.Find(id);
+            db.Ventas.Remove(venta);
+            db.SaveChanges();
             return RedirectToAction("Index");
         }
 
@@ -136,7 +125,7 @@ namespace Restaurante.MVC.Controllers
         {
             if (disposing)
             {
-                _UnityOfWork.Dispose();
+                db.Dispose();
             }
             base.Dispose(disposing);
         }

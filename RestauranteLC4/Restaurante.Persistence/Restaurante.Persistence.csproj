@@ -69,9 +69,9 @@
     <Compile Include="EntitiesConfigurations\TipoCorreoConfiguration.cs" />
     <Compile Include="EntitiesConfigurations\TipoTelefonoConfiguration.cs" />
     <Compile Include="EntitiesConfigurations\VentaConfiguration.cs" />
-    <Compile Include="Migrations\201705271959576_InitialModel.cs" />
-    <Compile Include="Migrations\201705271959576_InitialModel.Designer.cs">
-      <DependentUpon>201705271959576_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\201706072241050_sakfdsf.cs" />
+    <Compile Include="Migrations\201706072241050_sakfdsf.Designer.cs">
+      <DependentUpon>201706072241050_sakfdsf.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,8 +110,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705271959576_InitialModel.resx">
-      <DependentUpon>201705271959576_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706072241050_sakfdsf.resx">
+      <DependentUpon>201706072241050_sakfdsf.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

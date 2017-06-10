@@ -68,7 +68,11 @@ namespace Restaurante.MVC.App_Start
             kernel.Bind<RestauranteDbContext>().To<RestauranteDbContext>();
 
             kernel.Bind<ITipoBebidaRepository>().To<TipoBebidaRepository>();
-
+            kernel.Bind<IDepartamentoRepository>().To<DepartamentoRepository>();
+            kernel.Bind<IProvinciaRepository>().To<ProvinciaRepository>();
+            kernel.Bind<IDistritoRepository>().To<DistritoRepository>();
+            kernel.Bind<IDireccionRepository>().To<DireccionRepository>();
+            kernel.Bind<ISucursalRepository>().To<SucursalRepository>();
         }
     }
 }

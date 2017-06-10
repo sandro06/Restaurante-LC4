@@ -1,0 +1,35 @@
+﻿@model Restaurante.Entities.TipoTelefono
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TipoTelefono</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.ApeMat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.ApeMat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TipoTelefonoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,4 +1,5 @@
 ﻿using Restaurante.Entities;
+using Restaurante.Entities.IRepositories;
 using Restaurante.Persistence.EntitiesConfigurations;
 using System;
 using System.Collections.Generic;
@@ -32,7 +33,8 @@ namespace Restaurante.Persistence
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<Reserva> Reservas { get; set; }
-        public RestauranteDbContext() : base("Restaurante")
+        public IUnityOfWork _UnityOfWork { get; set; }
+        public RestauranteDbContext() : base("Restaurante_fRANCO")
 		{
 
         }
